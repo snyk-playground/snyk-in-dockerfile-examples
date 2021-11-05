@@ -1,0 +1,25 @@
+FROM node:lts-buster-slim
+
+ARG snyk_token
+
+RUN apt-get update && \
+    apt-get install -y curl && \
+    apt-get upgrade -y && \
+    apt-get autoremove -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY . /app
+RUN npm install 
+
+RUN mkdir -p /usr/local/bin/
+
+# install snyk
+RUN curl -O -s -L "https://static.snyk.io/cli/latest/snyk-linux"
+RUN mv snyk-linux /usr/local/bin/snyk
+RUN chmod +x /usr/local/bin/snyk
+
+# test for issues
+ENV SNYK_TOKEN=$snyk_token
+RUN snyk test
