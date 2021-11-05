@@ -29,3 +29,8 @@ docker build -t snyk-in-dockerfile:multistage \
              -f ./Dockerfile.snyk_multistage \
              --target snyk .
 ```
+Invoke the snyk security test via `docker run`
+```
+docker run -it --rm  -e SNYK_TOKEN \
+           snyk-in-dockerfile:multistage
+```
