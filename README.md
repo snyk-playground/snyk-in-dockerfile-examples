@@ -1,7 +1,7 @@
 ## Example Use Cases for snyk in a Dockerfile
-__1 - fail a `docker build` if snyk detects vulnerabilities | [Dockerfile.snyk_test](Dockerfile.snyk_test)__
+__1 - [Dockerfile.snyk_test](Dockerfile.snyk_test) | fail a `docker build` if snyk detects vulnerabilities__
 
-Example invocation, pass $SNYK_TOKEN as a dynamic build argument to authenticate the CLI
+Example invocation, passing $SNYK_TOKEN as a dynamic build argument to authenticate the CLI
 ```
 docker build -t snyk-in-dockerfile:test \
              --build-arg snyk_token=${SNYK_TOKEN} \
