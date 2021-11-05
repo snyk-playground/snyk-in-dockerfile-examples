@@ -26,7 +26,7 @@ __3 - [Dockerfile.snyk_multistage](Dockerfile.snyk_multistage) | instrument snyk
 First build the target stage which includes both snyk and the application
 ```
 docker build -t snyk-in-dockerfile:multistage \
-             -f ./Dockerfile.snyk_multistage \
+             -f Dockerfile.snyk_multistage \
              --target snyk .
 ```
 Invoke the snyk security test via `docker run`
