@@ -7,6 +7,9 @@ docker build -t snyk-in-dockerfile:test \
              --build-arg snyk_token=${SNYK_TOKEN} \
              -f Dockerfile.snyk_test .
 ```
+
+See [Github Workflow example](/actions/workflows/snyk_test.yml)
+
 __2 - [Dockerfile.snyk_run](Dockerfile.snyk_run) | package snyk CLI into application container to test later via `docker run`__
 
 First build the application with snyk included in the resulting image
