@@ -8,7 +8,7 @@ docker build -t snyk-in-dockerfile:test \
              -f Dockerfile.snyk_test .
 ```
 
-See [Github Workflow example](/actions/workflows/snyk_test.yml)
+See [Github Workflow example](https://github.com/snyk-playground/snyk-in-dockerfile-examples/actions/workflows/snyk_test.yml)
 
 __2 - [Dockerfile.snyk_run](Dockerfile.snyk_run) | package snyk CLI into application container to test later via `docker run`__
 
