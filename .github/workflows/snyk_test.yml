@@ -27,6 +27,8 @@ jobs:
 
       # build the container image which includes snyk test
       - name: docker build
-        run: docker build -f Dockerfile.snyk_test .
+        run: docker build -t snyk-in-dockerfile:test \
+             --build-arg snyk_token=${{ secrets.SNYK_TOKEN }} \
+             -f Dockerfile.snyk_test .
 
       
