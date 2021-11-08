@@ -24,6 +24,8 @@ docker run -it --rm -e SNYK_TOKEN \
            snyk test --json
 ```
 
+See [Github Workflow example](https://github.com/snyk-playground/snyk-in-dockerfile-examples/actions/workflows/snyk_run.yml)
+
 __3 - [Dockerfile.snyk_multistage](Dockerfile.snyk_multistage) | instrument snyk test in a multi-stage docker build__
 
 First build the target stage which includes both snyk and the application
@@ -37,3 +39,5 @@ Invoke the snyk security test via `docker run`
 docker run -it --rm  -e SNYK_TOKEN \
            snyk-in-dockerfile:multistage
 ```
+
+See [Github Workflow example](https://github.com/snyk-playground/snyk-in-dockerfile-examples/actions/workflows/snyk_multistage.yml)
