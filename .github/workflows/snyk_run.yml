@@ -31,5 +31,5 @@ jobs:
         
       # invoke snyk test from within the built container image
       - name: docker run
-        run: docker run -it --rm -e ${{ secrets.SNYK_TOKEN }} snyk-in-dockerfile:run snyk test --json
+        run: docker run -it --rm -e ${{ secrets.SNYK_TOKEN }} -t snyk-in-dockerfile:run snyk test --json
       
