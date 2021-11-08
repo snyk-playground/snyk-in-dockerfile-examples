@@ -19,7 +19,7 @@ docker build -t snyk-in-dockerfile:run \
 ```
 Invoke snyk security test via `docker run`
 ```
-docker run -it --rm -e SNYK_TOKEN \
+docker run --rm -e SNYK_TOKEN \
            snyk-in-dockerfile:run \
            snyk test --json
 ```
@@ -36,7 +36,7 @@ docker build -t snyk-in-dockerfile:multistage \
 ```
 Invoke the snyk security test via `docker run`
 ```
-docker run -it --rm  -e SNYK_TOKEN \
+docker run --rm  -e SNYK_TOKEN \
            snyk-in-dockerfile:multistage
 ```
 
