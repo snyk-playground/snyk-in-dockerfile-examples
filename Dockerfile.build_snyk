@@ -1,0 +1,2 @@
+FROM myapp:build
+COPY --from=snyk/snyk:linux /usr/local/bin/snyk /usr/local/bin/snyk
