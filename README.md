@@ -6,12 +6,12 @@ First build the target stage which includes both snyk and the application
 ```
 docker build -t snyk-in-dockerfile:multistage \
              -f Dockerfile.snyk_multistage \
-             --target snyk .
+             --target builder-with-snyk .
 ```
 Invoke the snyk security test via `docker run`
 ```
 docker run --rm  -e SNYK_TOKEN \
-           snyk-in-dockerfile:multistage
+           snyk-in-dockerfile:multistage snyk test
 ```
 
 See [Github Workflow example](https://github.com/snyk-playground/snyk-in-dockerfile-examples/actions/workflows/snyk_multistage.yml)
