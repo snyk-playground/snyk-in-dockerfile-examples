@@ -18,7 +18,7 @@ docker run --rm  -e SNYK_TOKEN \
 
 See [Github Workflow example](https://github.com/snyk-playground/snyk-in-dockerfile-examples/actions/workflows/snyk_multistage.yml)
 
-__2 -  instrument snyk test in a multi-stage docker build__
+__2 -  instrument snyk test using separate dockerfiles__
 
 uses: [Dockerfile.build](Dockerfile.build) 
       [Dockerfile.build_snyk](Dockerfile.build_snyk) 
