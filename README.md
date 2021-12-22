@@ -35,8 +35,7 @@ docker build -t myapp:build_snyk -f Dockerfile.build_snyk .
 
 Invoke the snyk security test via `docker run`
 ```
-docker run --rm -e SNYK_TOKEN=${{ secrets.SNYK_TOKEN }} \
-           myapp:build_snyk snyk test
+docker run --rm -e SNYK_TOKEN myapp:build_snyk snyk test
 ```
 
 See [Github Workflow example](https://github.com/snyk-playground/snyk-in-dockerfile-examples/actions/workflows/snyk_separate_dockerfiles.yml)
